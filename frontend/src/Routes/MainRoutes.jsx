@@ -7,7 +7,7 @@ import Home from "../Landing page/Home";
 import { Login } from "../Auth Page/Login";
 import { Signup } from "../Auth Page/Signup"
 import Navbar from "../util/Navbar";
-import { Footer } from "../util/Footer";
+import  Footer  from "../Footer/Footer";
 const MainRoutes = () => {
 
     return (
