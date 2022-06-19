@@ -4,23 +4,45 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [hover, setHover] = React.useState(false);
   return (
     <>
-    <div>
-    <img style={{width:"200px"}} src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"/>
+      <div>
+        <img
+          style={{ width: "200px" }}
+          src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
+        />
 
-    <div style={{display:"flex", marginLeft:"85%",gap:"8px", marginTop: "-20px"}}>
-        <img style={{width:"20px",height:"20px"}} src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""/>
-        <p>SEARCH</p>
-        <img onClick={ () => {
-          navigate("/login")
-        }} style={{width:"20px",height:"20px",marginLeft:"10px"}} src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt=""/>
-        <img style={{width:"20px",height:"20px",marginLeft:"10px"}}  src="https://cdn-icons-png.flaticon.com/512/1656/1656850.png" alt=""/>
-
-    </div>
-    </div>
+        <div
+          style={{
+            display: "flex",
+            marginLeft: "85%",
+            gap: "8px",
+            marginTop: "-20px",
+          }}
+        >
+          <img
+            style={{ width: "20px", height: "20px" }}
+            src="https://cdn-icons-png.flaticon.com/128/54/54481.png"
+            alt=""
+          />
+          <p>SEARCH</p>
+          <img
+            onClick={() => {
+              navigate("/login");
+            }}
+            style={{ width: "20px", height: "20px", marginLeft: "10px" }}
+            src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png"
+            alt=""
+          />
+          <img
+            style={{ width: "20px", height: "20px", marginLeft: "10px" }}
+            src="https://cdn-icons-png.flaticon.com/512/1656/1656850.png"
+            alt=""
+          />
+        </div>
+      </div>
       <nav className="menu">
         <div className="wrapper">
           <div className="logo">
@@ -32,17 +54,14 @@ const Navbar = () => {
               <i className="fa fa-times"></i>
             </label>
             <li>
-            
               <input type="checkbox" id="showMega" />
-        
 
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                  
                     <hr id="horizontal-line" />
                     <ul className="mega-links" id="line-height-new">
-                    <li>
+                      <li>
                         <Link to="/products/women">Clothing</Link>
                       </li>
                       <li>
@@ -93,7 +112,6 @@ const Navbar = () => {
                     </ul>
                   </div>
 
-                 
                   <div className="row">
                     <header>Home</header>
                     <ul className="mega-links">
@@ -150,9 +168,8 @@ const Navbar = () => {
 
               <div className="mega-box">
                 <div className="content">
-               
                   <div className="row">
-                    <header >WOMEN'S CLOTHING</header>
+                    <header>WOMEN'S CLOTHING</header>
                     <ul className="mega-links">
                       <li>
                         <Link to="/products/womens">Activewear</Link>
@@ -270,7 +287,6 @@ const Navbar = () => {
                       </li>
                     </ul>
                   </div>
-
                 </div>
               </div>
             </li>
@@ -283,7 +299,6 @@ const Navbar = () => {
                 SHOES
               </Link>
               <input type="checkbox" id="showMega" />
-           
 
               <div className="mega-box">
                 <div className="content">
@@ -292,8 +307,8 @@ const Navbar = () => {
                     <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <Link to="/gift" id="bold">
-                          Mother's Day Gifts
+                        <Link to="/products/shoes" id="bold">
+                          Shop All
                         </Link>
                       </li>
                       <li>
@@ -537,7 +552,6 @@ const Navbar = () => {
                       </li>
                     </ul>
                   </div>
-                 
                 </div>
               </div>
             </li>
@@ -811,7 +825,6 @@ const Navbar = () => {
                       </li>
                     </ul>
                   </div>
-               
                 </div>
               </div>
             </li>
@@ -2149,10 +2162,6 @@ const Navbar = () => {
                 </div>
               </div>
             </li>
-
-           
-
-          
           </ul>
         </div>
       </nav>
