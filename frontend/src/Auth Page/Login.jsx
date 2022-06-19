@@ -7,13 +7,13 @@ export function Login() {
     let navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        alert("login successful")
-        navigate("/");
-        // axios.post("https://blueflycloneunitv.herokuapp.com/auth/login", { ...data })
-        //     .then(user => {
-        //         alert(user.data.message)
-        //         navigate("/", { replace: true });
-        //     }).catch(errors => console.log(errors.message));
+        // alert("login successful")
+        // navigate("/");
+        axios.post("https://blueflycloneunitv.herokuapp.com/auth/login", { ...data })
+            .then(user => {
+                alert(user.data.message)
+                navigate("/", { replace: true });
+            }).catch(errors => console.log(errors.message));
 
     };
     return (

@@ -9,12 +9,12 @@ export function Signup() {
     const onSubmit = (data) => {
         alert("Account created successfully.");
         navigate("/login")
-        // axios.post("https://blueflycloneunitv.herokuapp.com/auth/register", { ...data })
-        //     .then(res => {
-        //         alert("Account created successfully.");
-        //         navigate("/login", { replace: true });
-        //     })
-        //     .catch(error => console.log(error));
+        axios.post("https://blueflycloneunitv.herokuapp.com/auth/register", { ...data })
+            .then(res => {
+                alert("Account created successfully.");
+                navigate("/login", { replace: true });
+            })
+            .catch(error => console.log(error));
     };
     return (
         <div id={styles.signupSection}>
