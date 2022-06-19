@@ -7,12 +7,14 @@ export function Signup() {
     let navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        axios.post("http://localhost:8000/auth/register", { ...data })
-            .then(res => {
-                alert("Account created successfully.");
-                navigate("/login", { replace: true });
-            })
-            .catch(error => console.log(error));
+        alert("Account created successfully.");
+        navigate("/login")
+        // axios.post("https://blueflycloneunitv.herokuapp.com/auth/register", { ...data })
+        //     .then(res => {
+        //         alert("Account created successfully.");
+        //         navigate("/login", { replace: true });
+        //     })
+        //     .catch(error => console.log(error));
     };
     return (
         <div id={styles.signupSection}>

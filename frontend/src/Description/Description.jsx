@@ -9,7 +9,7 @@ const Description = () => {
     const Desdata = useSelector((state) => state.descriptionData);
     console.log(Desdata, "desdata")
     return <>
-     <div style={{ width:"100%", marginTop:"40px"} }>
+     <div style={{ width:"100%", marginTop:"80px"} }>
        <div className={Styles.blackdiv}>
       <BlackSlider />
     </div>

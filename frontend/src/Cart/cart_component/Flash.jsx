@@ -16,9 +16,12 @@ const Flash = () => {
   }, []);
 
   return (
-      <>  <div className="blackdiv">
+      <>  
+       <div style={{ width:"100%", marginTop:"80px"} }>
+      <div className="blackdiv">
         <BlackSlider />
        </div>  
+       </div>
     </>
   );
 };

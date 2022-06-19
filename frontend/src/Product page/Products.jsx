@@ -64,14 +64,14 @@ useEffect(()=>{
   //   console.log(filterData,"filter")
 // return;
   return <>
-      <div style={{ width:"100%", marginTop:"40px"} }>
+      <div style={{ width:"100%", marginTop:"80px"} }>
     <div className={styles.blackdiv}>
       <BlackSlider />
     </div>
     </div>
 
     {/* <div className={styles.welcome} ><p>WELCOME TO BLUEFLY: Luxury brands at discounted prices</p></div> */}
-    <h1 className={styles.ids}>{id} </h1>
+    <h1 style={{marginLeft:"50%"}} >{id} </h1>
     <div className={styles.main}>
 
 

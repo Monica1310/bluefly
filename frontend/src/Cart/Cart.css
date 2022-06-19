@@ -28,6 +28,7 @@
 }
 .head{
     text-align: center;
+    margin-top: 30px;
 }
 .prod_grid{
    display: grid;

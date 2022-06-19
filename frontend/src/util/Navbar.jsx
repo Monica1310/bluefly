@@ -311,67 +311,67 @@ const Navbar = () => {
                     <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Shop All
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Boots
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Espadrilles
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Flats
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Mules & Slides
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Oxfords & Loafers
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Pumps & Heels
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Sandals
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Slippers
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Sneakers
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Wedges
                         </Link>
                       </li>
                       {/* <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Nike for the Family
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/shoes" id="bold">
+                        <Link to="/products/Shoes" id="bold">
                           Rack Essentials
                         </Link>
                       </li>
