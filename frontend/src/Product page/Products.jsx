@@ -64,9 +64,10 @@ useEffect(()=>{
   //   console.log(filterData,"filter")
 // return;
   return <>
-
+      <div style={{ width:"100%", marginTop:"40px"} }>
     <div className={styles.blackdiv}>
       <BlackSlider />
+    </div>
     </div>
 
     {/* <div className={styles.welcome} ><p>WELCOME TO BLUEFLY: Luxury brands at discounted prices</p></div> */}
