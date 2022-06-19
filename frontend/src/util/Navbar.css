@@ -3,124 +3,236 @@
   margin: 0%;
 } */
 #Header {
-    background-color: white;
-  }
-  nav {
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    margin-left: 13%;
-  }
-  
-  nav > p {
-    display: inline-flex;
-    padding: 13px;
-  }
-  nav > p > a {
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-  }
-  .SecNav {
-    position: fixed;
-    background-color: white;
-    height: 400px;
-  }
-  .SecNav > ul > li {
-    float: left;
-    display: block;
-    padding-left: 48px;
-    position: relative;
-  }
-  .SecNav > ul > li > a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .SecNav > ul > li > ul > li {
-    display: block;
-    padding-top: 8px;
-  }
-  .SecNav > ul > li > ul > li > a {
-    text-decoration: none;
-    color: rgb(44, 44, 44);
-  }
-  #Home_Buttons {
-    display: inline-flex;
-    align-items: center;
-  }
-  .H_but {
-    width: 40px;
-    margin-right: 20px;
-  }
-  #Blue_Logo {
-    margin-left: 515px;
-    margin-right: 300px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  .search {
-    margin-left: -20px;
-    margin-right: 20px;
-    text-decoration: none;
-    color: black;
-  }
-  #clearance {
-    width: 1365px;
-    text-align: center;
-    padding-bottom: 10px;
-  }
-  #clearance > a {
-    color: red;
-    text-decoration: none;
-  }
-  .hoverEff:hover {
-    border-bottom: 2px solid black;
-  }
-  #clearance:hover {
-    text-decoration-line: underline;
-  }
-  .SecNav {
-    display: none;
-  }
-  #Show_Shoes {
-    display: block;
-  }
-  #Hide_Shoes {
-    display: none;
-  }
-  #Fixed {
-    z-index: 2;
-    position: fixed;
-    background-color: white;
-    margin-top: -165px;
-  }
-  #Spacediv {
-    border: 0.5px solid white;
-    margin-top: 165px;
-  }
-  #Hide_Shoes,
-  #Hide_Hand,
-  #Hide_Design,
-  #Hide_Women,
-  #Hide_Men,
-  #Hide_Glass,
-  #Hide_Watch,
-  #Hide_Under,
-  #Hide_Beauty,
-  #Hide_Clear {
-    display: none;
-  }
-  #Show_Shoes,
-  #Show_Hand,
-  #Show_Design,
-  #Show_Women,
-  #Show_Men,
-  #Show_Glass,
-  #Show_Watch,
-  #Show_Under,
-  #Show_Beauty,
-  #Show_Clear {
-    display: block;
-  }
+  background-color: white;
+}
+nav {
+  width: 100%;
+  /* height: 60px; */
+  background-color: white;
+}
+
+nav > p {
+  display: inline-flex;
+  padding: 13px;
+}
+nav > p > a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+.SecNav {
+  position: fixed;
+  background-color: white;
+  height: 400px;
+}
+.SecNav > ul > li {
+  float: left;
+  display: block;
+  padding-left: 48px;
+  position: relative;
+}
+.SecNav > ul > li > a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+.SecNav > ul > li > ul > li {
+  display: block;
+  padding-top: 8px;
+}
+.SecNav > ul > li > ul > li > a {
+  text-decoration: none;
+  color: rgb(44, 44, 44);
+}
+#Home_Buttons {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#Home_Buttons > div {
+  position: absolute;
+  right: 0;
+}
+.H_but {
+  width: 40px;
+  margin-right: 20px;
+}
+#Blue_Logo {
+  width: 200px;
+  height: 31px;
+  margin-left: 550px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.search {
+  margin-left: -20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+}
+#clearance {
+  width: 1365px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#clearance > a {
+  color: red;
+  text-decoration: none;
+}
+
+#clearance:hover {
+  text-decoration-line: underline;
+}
+/* .SecNav {
+  display: none;
+} */
+#Show_Shoes {
+  display: block;
+}
+#Hide_Shoes {
+  display: none;
+}
+#Fixed {
+  z-index: 2;
+  /* position: absolute; */
+  background-color: white;
+  /* margin-top: -165px; */
+}
+#Spacediv {
+  border: 0.5px solid white;
+  margin-top: 165px;
+}
+
+#navThird {
+  top: 70px;
+  height: 8vh;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  position: absolute;
+  margin-bottom: 30px;
+}
+#navThirdList {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+#navThirdList > li {
+  width: auto;
+  font-size: 2.5vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: 1.8vh;
+  padding: 1.81vh;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Up Arrow icon on hover */
+
+#navThirdList > li:hover {
+  /* background-color: #c07; */
+  text-decoration: underline 2px solid black;
+}
+.liIcon {
+  color: white;
+  padding: 0.313rem;
+}
+/* Hover effects  */
+.nav-item:hover .liIcon {
+  display: block;
+  margin: auto;
+  display: grid;
+  padding: auto;
+  transition: 600ms;
+}
+#navThirdList > li > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+/* .cat1 {
+  font-weight: bold;
+} */
+/* sub items after hover on any li elements */
+.nav-item .sub-items {
+  pointer-events: none;
+  transform: translateY(0);
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  padding: 20px;
+  background-color: white;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.313rem 0.938rem; */
+  box-shadow: 0 10px 20px #00000017;
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  left: 8vw;
+  top: 8vh;
+  opacity: 0;
+  z-index: 5;
+  visibility: hidden;
+}
+
+.nav-item:hover .sub-items {
+  pointer-events: all;
+  transform: translateY(0);
+  transition: 600ms;
+  opacity: 1;
+  visibility: visible;
+}
+
+#clearance {
+  justify-content: space-between;
+  width: 400px;
+}
+
+/* Sub list of sub items from hover of any perent li */
+.nav-item .sub-items .sub-list {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.sub-list > div > h4 {
+  /* margin-top: 0; */
+  margin-bottom: 20px;
+}
+
+.sub-list > div > div {
+  display: flex;
+  /* justify-content: space-between; */
+  column-gap: 10px;
+}
+
+.sub-list li {
+  list-style: none;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.sub-list > ul > li:first-child {
+  margin-bottom: 25px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.sub-list a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+}
+
+.sub-img > * {
+  margin: 10px 0;
+}
