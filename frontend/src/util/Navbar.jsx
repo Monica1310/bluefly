@@ -1,19 +1,23 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const [hover, setHover] = React.useState(false);
   return (
     <>
     <div>
     <img style={{width:"200px"}} src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"/>
 
-    <div style={{display:"flex", marginLeft:"50%",gap:"5px", marginTop: "-10px"}}>
-        <img style={{width:"30px",height:"30px"}} src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""/>
+    <div style={{display:"flex", marginLeft:"85%",gap:"8px", marginTop: "-20px"}}>
+        <img style={{width:"20px",height:"20px"}} src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""/>
         <p>SEARCH</p>
-        <img style={{width:"20px",height:"30px"}} src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt=""/>
-        <img style={{width:"20px",height:"30px"}}  src="https://cdn-icons-png.flaticon.com/512/1656/1656850.png" alt=""/>
+        <img onClick={ () => {
+          navigate("/login")
+        }} style={{width:"20px",height:"20px",marginLeft:"10px"}} src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt=""/>
+        <img style={{width:"20px",height:"20px",marginLeft:"10px"}}  src="https://cdn-icons-png.flaticon.com/512/1656/1656850.png" alt=""/>
 
     </div>
     </div>
