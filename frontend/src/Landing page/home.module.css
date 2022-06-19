@@ -15,12 +15,14 @@
   color: black;
 }
 .blackdiv {
+  margin-top: 20px;
   background-color: black;
   height: 40px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .blackdiv > div {
   display: flex;
@@ -219,3 +221,6 @@
 .BlackSlidermargin > p {
   margin-top: 15px;
 }
+/* .main{
+  margin-top: 100px;
+} */

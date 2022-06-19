@@ -10,9 +10,14 @@ import BottomOffer from "./offerGrid/BottomOffer";
 const Home = () => {
   return (
     <div className={styles.main}>
+        <p style={{color:"red", marginTop:"50px"}}>CLEARANCE</p>
+      <div style={{ width:"100%", marginTop:"30px"} }>
       <div className={styles.blackdiv}>
         <BlackSlider />
       </div>
+      </div>
+
+
 
       <Slider />
       <BannerGrid />
