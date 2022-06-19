@@ -9,6 +9,7 @@ const Navbar = () => {
   return (
     <>
       <div>
+      
         <img
           style={{ width: "200px" }}
           src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
