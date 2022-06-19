@@ -14,7 +14,7 @@ const Cartx = () => {
 
     {cartdata.map((el) => {
       return <>
-      <h1>{el.title}</h1>
+      <>{el.title}</>
       </>
     })}
     

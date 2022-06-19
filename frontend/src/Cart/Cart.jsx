@@ -6,7 +6,13 @@ import './Cart.css';
 import Cart_footer from './cart_component/Cart_footer';
 import Flash from './cart_component/Flash';
 import Product from './cart_component/Product';
+import { useSelector } from "react-redux"
+
+
+
 const Cart = () => {
+
+  
   const [val, setVal] = useState(1);
 
   return (

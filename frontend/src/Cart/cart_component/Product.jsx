@@ -1,7 +1,14 @@
 import React from 'react';
+import { useSelector } from "react-redux"
 
 const Product = ({ val, setVal }) => {
+
+  const cartdata = useSelector((state) => state.cartData);
+  console.log(cartdata,"cartdata");
+
+
   return (
+    
     <div>
       <div className="prod_grid">
         <div className="product">

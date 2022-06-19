@@ -8,6 +8,7 @@ import { Login } from "../Auth Page/Login";
 import { Signup } from "../Auth Page/Signup"
 import Navbar from "../util/Navbar";
 import  Footer  from "../Footer/Footer";
+import Cart from "../Cart/Cart"
 const MainRoutes = () => {
 
     return (
@@ -19,7 +20,7 @@ const MainRoutes = () => {
                 <Route path="signup" element={<Signup />} />
                 <Route path="/description" element={<Description />} />
                 <Route path="products/:id" element={<Products />}></Route>
-                {/* <Route path="cart" element={<Cart />}></Route> */}
+                <Route path="cart" element={<Cart />}></Route>
             </Routes>
             <Footer />
         </>
