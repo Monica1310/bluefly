@@ -4,6 +4,8 @@ import { useState } from 'react';
 import './Info.modules.css';
 import Order from './Order';
 const Info = () => {
+
+
   const [detail, setDetail] = useState({});
 
   const changval = (e) => {
@@ -14,7 +16,7 @@ const Info = () => {
   };
   const addres = (e) => {
     e.preventDefault();
-    console.log(detail);
+    // console.log(detail);
     localStorage.setItem('address', JSON.stringify(detail));
   };
   return (

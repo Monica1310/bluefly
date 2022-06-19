@@ -6,7 +6,7 @@ const Product = ({ el , total}) => {
 
   const[val,setVal] = useState(1)
 
-console.log(el,"elem")
+// console.log(el,"elem")
 
 
   return (

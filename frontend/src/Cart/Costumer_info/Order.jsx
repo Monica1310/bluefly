@@ -2,6 +2,10 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 const Order = () => {
+
+  var theTotal = localStorage.getItem("total")
+  console.log(theTotal,"from local")
+
   const [coup, setCoup] = useState({});
   const [total, setTotal] = useState(500);
   const [flag, setFlag] = useState(false);
@@ -17,7 +21,7 @@ const Order = () => {
   const applybtn = (e) => {
     e.preventDefault();
     const val = e.target.value;
-    console.log(val);
+    // console.log(val);
     if (coup.coupon == coup.apply) {
       const data = 1 - 30 / 100;
       let totalval = total * data;
@@ -59,7 +63,7 @@ const Order = () => {
         <div className="details">
           <div className="subtotals">
             <p>subtotal</p>
-            <p>$234</p>
+            <p>$ {theTotal}</p>
           </div>
           <div className="sipping">
             <p>shipping</p>
@@ -73,7 +77,7 @@ const Order = () => {
         <hr />
         <div className="total_pay">
           <p>Totol</p>
-          <p>${total}</p>
+          <p>${theTotal}</p>
         </div>
       </div>
     </>

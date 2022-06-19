@@ -7,10 +7,13 @@ import Cart_footer from './cart_component/Cart_footer';
 import Flash from './cart_component/Flash';
 import Product from './cart_component/Product';
 import { useSelector } from "react-redux"      
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Cart = () => {
+
+  const navigate = useNavigate()
 
   const cartdata = useSelector((state) => state.cartData);
   console.log(cartdata,"cartdata");
@@ -24,6 +27,8 @@ total= total+Number(cartdata[i].price.extracted.$numberDecimal)
   }
 
   console.log("total",total)
+
+  localStorage.setItem("total",total)
 
   // const [val, setVal] = useState(1);
 
@@ -70,7 +75,9 @@ total= total+Number(cartdata[i].price.extracted.$numberDecimal)
             </p>
             <div className="lower">
               <button className="update">Update Cart</button>
-              <button className="checkout">Check Out</button>
+              <button onClick={() => {
+                  navigate("/checkout")
+              }} className="checkout">Check Out</button>
             </div>
           </div>
         </div>

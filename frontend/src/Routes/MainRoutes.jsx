@@ -9,6 +9,7 @@ import { Signup } from "../Auth Page/Signup"
 import Navbar from "../util/Navbar";
 import  Footer  from "../Footer/Footer";
 import Cart from "../Cart/Cart"
+import Info from "../Cart/Costumer_info/Info";
 const MainRoutes = () => {
 
     return (
@@ -21,6 +22,7 @@ const MainRoutes = () => {
                 <Route path="/description" element={<Description />} />
                 <Route path="products/:id" element={<Products />}></Route>
                 <Route path="cart" element={<Cart />}></Route>
+                <Route path="/checkout" element={<Info/>}/>
             </Routes>
             <Footer />
         </>
