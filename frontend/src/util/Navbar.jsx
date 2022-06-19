@@ -9,13 +9,14 @@ const Navbar = () => {
   return (
     <>
       <div>
-      
         <img
-          style={{ width: "200px", marginLeft:"45%" }}
+          style={{ width: "200px", marginLeft: "45%" }}
           src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
-         onClick={() => {
-          navigate("/")
-         }}/>
+          onClick={() => {
+            navigate("/");
+          }}
+          alt="logome"
+        />
 
         <div
           style={{
@@ -315,62 +316,62 @@ const Navbar = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          New Arrivals
+                        <Link to="/products/shoes" id="bold">
+                          Boots
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Best Sellers
+                        <Link to="/products/shoes" id="bold">
+                          Espadrilles
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Designer Brands
+                        <Link to="/products/shoes" id="bold">
+                          Flats
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Contemporary Brands
+                        <Link to="/products/shoes" id="bold">
+                          Mules & Slides
                         </Link>
                       </li>
                       <li>
-                        <Link to="/#" id="bold">
-                          Graphic Tees Under $25
+                        <Link to="/products/shoes" id="bold">
+                          Oxfords & Loafers
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Denim Under $50
+                        <Link to="/products/shoes" id="bold">
+                          Pumps & Heels
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Swim & Sun Under $50
+                        <Link to="/products/shoes" id="bold">
+                          Sandals
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Sneakers Under $50
+                        <Link to="/products/shoes" id="bold">
+                          Slippers
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Wedding Shop
+                        <Link to="/products/shoes" id="bold">
+                          Sneakers
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Shop by Occasion
+                        <Link to="/products/shoes" id="bold">
+                          Wedges
                         </Link>
                       </li>
-                      <li>
-                        <Link to="/gift" id="bold">
+                      {/* <li>
+                        <Link to="/products/shoes" id="bold">
                           Nike for the Family
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
+                        <Link to="/products/shoes" id="bold">
                           Rack Essentials
                         </Link>
                       </li>
@@ -388,50 +389,50 @@ const Navbar = () => {
                         <Link to="/gift" id="bold">
                           Clearance
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   <div className="row">
                     <header>WOMEN'S DESIGNERS</header>
                     <ul className="mega-links">
                       <li>
-                        <Link to="/products/Shoes">Activewear</Link>
+                        <Link to="/products/Shoes">Balenciaga</Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Blazers&Sports Coats</Link>
+                        <Link to="/products/Shoes">Bottega Veneta</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Coats & Jackets</Link>
+                        <Link to="/products/Shoes">Burberry</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Dress Shirts</Link>
+                        <Link to="/products/Shoes">Celine</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Jeans</Link>
+                        <Link to="/products/Shoes">Chloe</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Joggers & Sweatpants</Link>
+                        <Link to="/products/Shoes">Dolce & Gabbana</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Lounge, Pajamas & Robes</Link>
+                        <Link to="/products/Shoes">Fendi</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Pants</Link>
+                        <Link to="/products/Shoes">Givenchy</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Polo Shirts</Link>
+                        <Link to="/products/Shoes">Gucci</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Shirts</Link>
+                        <Link to="/products/Shoes">Prada</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Shorts</Link>
+                        <Link to="/products/Shoes">Saint Laurent</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Socks</Link>
+                        <Link to="/products/Shoes">Salvatore Ferragamo</Link>
                       </li>
-                      <li>
-                        <Link to="/products/Men">Suits & Separates</Link>
+                      {/* <li>
+                        <Link to="/products/Shoes">Suits & Separates</Link>
                       </li>
                       <li>
                         <Link to="/products/Men">Sweaters</Link>
@@ -448,34 +449,36 @@ const Navbar = () => {
 
                       <li>
                         <Link to="/products/Men">Underwear</Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   <div className="row">
                     <header>mEN'S SHOES</header>
                     <ul className="mega-links">
                       <li>
-                        <Link to="/products/Shoes">Athletic & Running</Link>
-                      </li>
-                      <li>
-                        <Link to="/products/Shoes">Boot Shoes</Link>
+                        <Link to="/products/Shoes">Shop All</Link>
                       </li>
                       <li>
                         <Link to="/products/Shoes">Boots</Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Comfort</Link>
+                        <Link to="/products/Shoes">
+                          Drivers, Loafers & Slip-Ons
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Dress Shoes</Link>
+                        <Link to="/products/Shoes">Oxford & Derby Shoes</Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Loafers & Slip-Ons</Link>
+                        <Link to="/products/Shoes">Sandals & Flip Flops</Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Oxfords & Derbys</Link>
+                        <Link to="/products/Shoes">Slippers</Link>
                       </li>
                       <li>
+                        <Link to="/products/Shoes">Sneakers</Link>
+                      </li>
+                      {/* <li>
                         <Link to="/products/Shoes">Sandals & Flip-Flops</Link>
                       </li>
                       <li>
@@ -490,7 +493,7 @@ const Navbar = () => {
                         <Link to="/products/Shoes">
                           Extended Shoe Sizes & Widths
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
 
@@ -498,53 +501,53 @@ const Navbar = () => {
                     <header>MEN'S DESIGNERS</header>
                     <ul className="mega-links">
                       <li>
-                        <Link to="/products/Shoes">Accessories</Link>
+                        <Link to="/products/Shoes">MEN'S DESIGNERS</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Clothing</Link>
+                        <Link to="/products/Shoes">Antonio Maurizi</Link>
                       </li>
                       <li>
-                        <Link to="/products/Shoes">Shoes</Link>
+                        <Link to="/products/Shoes">Aquatalia</Link>
                       </li>
 
                       <li>
-                        <Link to="/products/bag" id="bold">
-                          Accessorise
+                        <Link to="/products/Shoes" id="bold">
+                          Balenciaga
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/bag"> Bags & Backpacks</Link>
+                        <Link to="/products/Shoes">Christian Louboutin</Link>
                       </li>
                       <li>
-                        <Link to="/products/bag">Sunglasses & Eyewear</Link>
+                        <Link to="/products/Shoes">Cole Haan</Link>
                       </li>
                       <li>
-                        <Link to="/products/bag">belt & Suspenders</Link>
+                        <Link to="/products/Shoes">Common Projects</Link>
                       </li>
                       <li>
-                        <Link to="/products/bag">Hats</Link>
+                        <Link to="/products/Shoes">Giuseppe Zanotti</Link>
                       </li>
                       <li>
-                        <Link to="/products/bag">Jewelry</Link>
+                        <Link to="/products/Shoes">Gucci</Link>
                       </li>
                       <li>
-                        <Link to="/products/bag">Ties & Pocket Squares</Link>
+                        <Link to="/products/Shoes">Prada</Link>
                       </li>
                       <li>
-                        <Link to="/products/bag">Wallets & Card Cases</Link>
+                        <Link to="/products/Shoes">Saint Laurent</Link>
                       </li>
                       <li>
-                        <Link to="/products/bag" id="bold">
-                          Sunglasses & Eyewear
+                        <Link to="/products/Shoes" id="bold">
+                          Salvatore Ferragamo
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/bag" id="bold">
-                          Watches
+                        <Link to="/products/Shoes" id="bold">
+                          Tod's
                         </Link>
                       </li>
-                      <li>
-                        <Link to="/products/bag" id="bold">
+                      {/* <li>
+                        <Link to="/products/Shoes" id="bold">
                           Luggage & Travel
                         </Link>
                       </li>
@@ -552,7 +555,7 @@ const Navbar = () => {
                         <Link to="/products/bag" id="bold">
                           Grooming & Cologne
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -578,56 +581,56 @@ const Navbar = () => {
                     <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <Link to="/gift" id="bold">
-                          Mother's Day Gifts
+                        <Link to="/products/bag" id="bold">
+                          Shop All
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          New Arrivals
+                        <Link to="/products/bag" id="bold">
+                          Backpacks
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Best Sellers
+                        <Link to="/products/bag" id="bold">
+                          Bucket Bags
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Sandals Under $20
+                        <Link to="/products/bag" id="bold">
+                          Clutches
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Sneakers Under $30
+                        <Link to="/products/bag" id="bold">
+                          Crossbody Bags
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Nike for the Family
+                        <Link to="/products/bag" id="bold">
+                          Hobo Bags
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Swim Shop
+                        <Link to="/products/bag" id="bold">
+                          Satchels
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Disney Shop
+                        <Link to="/products/bag" id="bold">
+                          Shoulder Bags
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Z by Zella for the Family
+                        <Link to="/products/bag" id="bold">
+                          Tote Bags
                         </Link>
                       </li>
                       <li>
-                        <Link to="/gift" id="bold">
-                          Rack Essentials
+                        <Link to="/products/bag" id="bold">
+                          Wallets & Cardholders
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to="/gift" id="bold">
                           Baby Shower Gifts
                         </Link>
@@ -651,7 +654,7 @@ const Navbar = () => {
                         <Link to="/gift" id="bold">
                           Clearance
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   <div className="row">
