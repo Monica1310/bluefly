@@ -1,22 +1,23 @@
 import React from 'react';
+import { useState } from 'react';
 import { useSelector } from "react-redux"
 
-const Product = ({ val, setVal }) => {
+const Product = ({ el , total}) => {
 
-  const cartdata = useSelector((state) => state.cartData);
-  console.log(cartdata,"cartdata");
+  const[val,setVal] = useState(1)
+
+console.log(el,"elem")
 
 
   return (
-    
+
+
+
     <div>
       <div className="prod_grid">
         <div className="product">
           <div className="product_img">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/DiorByDior-2-00086-1_720x.jpg?v=1609777367"
-              alt="product-img"
-            />
+            <img style={{width:"200px", height:"200px"}} src={el.thumbnail} alt=""/>
           </div>
           <div className="product_title">
             <div>
@@ -31,7 +32,7 @@ const Product = ({ val, setVal }) => {
         <div className="prduct_info">
           <div className="price info">
             <label htmlFor="rate">price</label>
-            <div className="rate">${4365}</div>
+            <div className="rate">{el.price.raw}</div>
           </div>
           <div className="quanty info">
             <label htmlFor="quant">quantity</label>
@@ -46,7 +47,7 @@ const Product = ({ val, setVal }) => {
           </div>
           <div className="total info">
             <label htmlFor="all">Total</label>
-            <div className="all">${val * 4365}</div>
+            <div className="all">{val * Number(el.price.extracted.$numberDecimal)}</div>
           </div>
         </div>
       </div>

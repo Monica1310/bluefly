@@ -289,3 +289,23 @@ productInfo_tag>div{
         
     }
   }
+
+
+  .blackdiv {
+    background-color: black;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .blackdiv > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 13px;
+  }
+  .blackdiv > div > div > a {
+    display: none;
+  }

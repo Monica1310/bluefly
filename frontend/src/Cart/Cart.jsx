@@ -6,14 +6,26 @@ import './Cart.css';
 import Cart_footer from './cart_component/Cart_footer';
 import Flash from './cart_component/Flash';
 import Product from './cart_component/Product';
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux"      
 
 
 
 const Cart = () => {
 
-  
-  const [val, setVal] = useState(1);
+  const cartdata = useSelector((state) => state.cartData);
+  console.log(cartdata,"cartdata");
+// const   [totalx,setTotalx]=useState(0)
+  // console.log(cartdata.length,"length")
+
+  var total=0
+  for(var i=0; i<cartdata.length; i++)
+  {
+total= total+Number(cartdata[i].price.extracted.$numberDecimal)
+  }
+
+  console.log("total",total)
+
+  // const [val, setVal] = useState(1);
 
   return (
     <>
@@ -42,13 +54,16 @@ const Cart = () => {
 
       <main className="main">
         <hr className="hr" />
-        <Product val={val} setVal={setVal} />
+        {cartdata.map((el) => 
+     <Product el={el} total={total}  />
+    )}
+        
         <hr style={{ backgroundColor: '#e8e8e1' }} />
         <div style={{ height: '200px' }}>
           <div className="subtotal">
             <div className="upper">
               <div>SUBTOTAL</div>
-              <div subtotal_val>${34564}</div>
+              <div subtotal_val>$ {total}</div>
             </div>
             <p style={{ fontSize: '1.1rem' }}>
               Shipping, taxes, and discounts codes calculated at checkout.

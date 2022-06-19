@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import '../Cart.css';
+import BlackSlider from '../../Landing page/bannerslider/blackSlider';
 const Flash = () => {
   const [on, setOn] = useState(0);
   //   let ref = useRef(0);
@@ -15,22 +16,9 @@ const Flash = () => {
   }, []);
 
   return (
-    <>
-      <div className="offer">
-        {on % 2 === 0 ? (
-          <div>
-            <span className="highlight">free shipping</span>
-            <span className="subhighlight"> on order over $99</span>
-          </div>
-        ) : (
-          <div>
-            <span className="highlight">Welcome to bluefly</span>
-            <span className="subhighlight">
-              luxury brands at discounted price
-            </span>
-          </div>
-        )}
-      </div>
+      <>  <div className="blackdiv">
+        <BlackSlider />
+       </div>  
     </>
   );
 };
