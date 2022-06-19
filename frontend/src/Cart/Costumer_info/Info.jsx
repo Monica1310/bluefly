@@ -3,7 +3,10 @@ import React from 'react';
 import { useState } from 'react';
 import './Info.modules.css';
 import Order from './Order';
+import { useNavigate } from 'react-router-dom';
 const Info = () => {
+
+  const navigate = useNavigate()
 
 
   const [detail, setDetail] = useState({});
@@ -17,6 +20,7 @@ const Info = () => {
   const addres = (e) => {
     e.preventDefault();
     // console.log(detail);
+    navigate("/payment")
     localStorage.setItem('address', JSON.stringify(detail));
   };
   return (
@@ -352,7 +356,11 @@ const Info = () => {
               <div className="sippingbtn_flex">
                 <div className="return_btn">&#60; Return to shop more</div>
                 <div className="shipping_btn">
-                  <button onClick={addres}>Continue to shipping</button>
+                  <button onClick={
+
+                     addres
+                                  
+                   }>Continue to shipping</button>
                 </div>
               </div>
             </div>

@@ -4,7 +4,10 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import './Info.modules.css';
 import Order from './Order';
+import { useNavigate } from 'react-router-dom';
 const Payment = () => {
+
+  const navigate = useNavigate()
   const [addres, setAddres] = useState({});
   useEffect(() => {
     const getdata = JSON.parse(localStorage.getItem('address'));
@@ -16,6 +19,8 @@ const Payment = () => {
     alert(
       `Congratulation your order of price ${addres.subtotal} is placed and deliver in 2 days`
     );
+
+    navigate("/")
   };
   return (
     <div className="main_page">
