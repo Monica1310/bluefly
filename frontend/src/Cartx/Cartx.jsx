@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 
 
-const Cart = () => {
+const Cartx = () => {
 
   
      const cartdata = useSelector((state) => state.cartData);
@@ -21,4 +21,4 @@ const Cart = () => {
     </>
 }
 
-export default Cart
+export default Cartx
