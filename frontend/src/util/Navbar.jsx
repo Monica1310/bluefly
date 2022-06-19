@@ -657,7 +657,7 @@ const Navbar = () => {
                       </li> */}
                     </ul>
                   </div>
-                  <div className="row">
+                  {/* <div className="row">
                     <header>TOP DESIGNERS</header>
                     <ul className="mega-links">
                       <li>
@@ -830,7 +830,7 @@ const Navbar = () => {
                         <Link to="/products/Shoes">Big Kid (Sizes 3.5-7)</Link>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </li>
