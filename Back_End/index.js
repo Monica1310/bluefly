@@ -13,6 +13,7 @@ app.use("/products", productRouter);
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () => {
   console.log("Connected to MongoDB.");
 });
-app.listen(8000, () => {
+let PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
   console.log("Listening On Port 7492");
 });
