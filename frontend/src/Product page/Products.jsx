@@ -17,7 +17,7 @@ const Products = () => {
   const { id } = useParams()
   const [state, setState] = useState(false)
 useEffect(()=>{
-  axios.get("http://localhost:8000/products/all").then(res => {
+  axios.get("https://blueflycloneunitv.herokuapp.com/products/all").then(res => {
     product_data(dispatch,res.data);
   }).catch(err => {
   
