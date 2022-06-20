@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { Navigation } from "react-minimal-side-navigation";
 import "react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css";
 import { useParams, useNavigate } from "react-router-dom";
-import { description_data, sorted_data,product_data } from "../Redux/Data/Action";
+import { description_data, sorted_data, product_data } from "../Redux/Data/Action";
 import styles from "./styles.module.css";
 import BlackSlider from "../Landing page/bannerslider/blackSlider";
 import { useEffect } from "react";
@@ -16,16 +16,14 @@ const Products = () => {
   const dispatch = useDispatch()
   const { id } = useParams()
   const [state, setState] = useState(false)
-useEffect(()=>{
-  axios.get("http://localhost:8000/products/all").then(res => {
-    product_data(dispatch,res.data);
-  }).catch(err => {
-  
-    console.log(err,"err")
-  
-  })
-},[])
-// console.log(data , "the data")
+  useEffect(() => {
+    axios.get(process.env.REACT_APP_API_BASE_URL + "/products/all").then(res => {
+      product_data(dispatch, res.data);
+    }).catch(err => {
+      console.log(err, "err")
+    })
+  }, [])
+  // console.log(data , "the data")
   const handleclick = (payload) => {
     description_data(dispatch, payload);
     navigate("/description");
@@ -38,10 +36,7 @@ useEffect(()=>{
 
 
   //the sort
-
   const sortedData = useSelector((state) => state.sortedData);
-  console.log(sortedData,"sortedata");
-
   const handlesort = (e) => {
 
     if (e.target.value === "asc") {
@@ -60,14 +55,14 @@ useEffect(()=>{
   };
 
 
-  
+
   //   console.log(filterData,"filter")
-// return;
+  // return;
   return <>
-      <div style={{ width:"100%", marginTop:"40px"} }>
-    <div className={styles.blackdiv}>
-      <BlackSlider />
-    </div>
+    <div style={{ width: "100%", marginTop: "40px" }}>
+      <div className={styles.blackdiv}>
+        <BlackSlider />
+      </div>
     </div>
 
     {/* <div className={styles.welcome} ><p>WELCOME TO BLUEFLY: Luxury brands at discounted prices</p></div> */}
@@ -530,52 +525,53 @@ useEffect(()=>{
           <div className={styles.grid___1}>
             {
               state
-                ? sortedData.map((e) => {
+                ? sortedData.map((e, index) => {
                   return (
-                    <>
-                      <div
-                        onClick={() => {
-                          handleclick(e);
-                        }}
-                        className={styles.productContainer}
-                      >
-                        <div>
-                          <img className={styles.theimg} src={e.thumbnail} alt="" />
-                        </div>
-                        <div>
-                          <p className={styles.title}>{e.title}</p>
-                          <p>{e.condition}</p>
-                          <p className={styles.price}>{e.price.raw}</p>
-                          {/* <p className={styles.shipping}>{e.shipping}</p> */}
-                          {/* <p className={styles.sold}>{e.extensions}</p> */}
-                        </div>
+                    <div
+                      key={index}
+                      onClick={() => {
+                        handleclick(e);
+                      }}
+                      className={styles.productContainer}
+                    >
+                      <div>
+                        <img className={styles.theimg} src={e.thumbnail} alt="" />
                       </div>
-                    </>
+                      <div>
+                        <p className={styles.title}>{e.title}</p>
+                        <p>{e.condition}</p>
+                        <p className={styles.price}>{e.price.raw}</p>
+                        {/* <p className={styles.shipping}>{e.shipping}</p> */}
+                        {/* <p className={styles.sold}>{e.extensions}</p> */}
+                      </div>
+                    </div>
+
                   );
                 })
                 :
-                filterData.map((e) => {
+                filterData.map((e, index) => {
                   return (
-                    <>
-                      <div
-                        onClick={() => {
-                          handleclick(e);
-                        }}
-                        className={styles.productContainer}
-                      >
-                        <div>
-                          <img className={styles.theimg} src={e.thumbnail} alt="" />
 
-                        </div>
-                        <div>
-                          <p className={styles.title}>{e.title}</p>
-                          <p>{e.condition}</p>
-                          <p className={styles.price}>{e.price.raw}</p>
-                          {/* <p className={styles.shipping}>{e.shipping}</p> */}
-                          {/* <p className={styles.sold}>{e.extensions}</p> */}
-                        </div>
+                    <div
+                      key={index}
+                      onClick={() => {
+                        handleclick(e);
+                      }}
+                      className={styles.productContainer}
+                    >
+                      <div>
+                        <img className={styles.theimg} src={e.thumbnail} alt="" />
+
                       </div>
-                    </>
+                      <div>
+                        <p className={styles.title}>{e.title}</p>
+                        <p>{e.condition}</p>
+                        <p className={styles.price}>{e.price.raw}</p>
+                        {/* <p className={styles.shipping}>{e.shipping}</p> */}
+                        {/* <p className={styles.sold}>{e.extensions}</p> */}
+                      </div>
+                    </div>
+
                   );
                 })}
           </div>

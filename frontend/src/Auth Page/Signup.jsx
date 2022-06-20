@@ -7,7 +7,7 @@ export function Signup() {
     let navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        axios.post("http://localhost:8000/auth/register", { ...data })
+        axios.post(process.env.REACT_APP_API_BASE_URL + "/auth/register", { ...data })
             .then(res => {
                 alert("Account created successfully.");
                 navigate("/login", { replace: true });
@@ -16,6 +16,7 @@ export function Signup() {
     };
     return (
         <div id={styles.signupSection}>
+            <h1>create account</h1>
             <div>
                 <form id={styles.formSection} onSubmit={handleSubmit(onSubmit)}>
                     <div>
@@ -40,7 +41,6 @@ export function Signup() {
                     </div>
                     <div>
                         <label>password</label>
-                        {/* <input type="password" name="password" onChange={handleChange} /> */}
                         <input type="password" {...register("password", {
                             required: "Password is required.", minLength: {
                                 value: 5,
@@ -53,7 +53,6 @@ export function Signup() {
                         {errors.password && <small>{errors.password.message}</small>}
                     </div>
                     <section id={styles.subscribe}>
-                        {/* <input id={styles.offers} name="subscribe" type="checkbox" onChange={handleChange} /> */}
                         <input id={styles.offers} {...register("subscribe")} type="checkbox" />
                         <label>Subscribe to stay updated with new offers!</label>
                     </section>

@@ -7,7 +7,7 @@ export function Login() {
     let navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        axios.post("http://localhost:8000/auth/login", { ...data })
+        axios.post(process.env.REACT_APP_API_BASE_URL + "/auth/login", { ...data })
             .then(user => {
                 alert(user.data.message)
                 navigate("/", { replace: true });
@@ -21,7 +21,6 @@ export function Login() {
                 <form id={styles.formSection} onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <label>email</label>
-                        {/* <input type="email" name="email" onChange={handleChange} /> */}
                         <input type="email" {...register("email", { required: "Email is required", pattern: /^\S+@\S+$/i })} />
                         {errors.email && <small>{errors.email.message}</small>}
                     </div>
@@ -30,7 +29,6 @@ export function Login() {
                             <label>password</label>
                             <span>Forgot password?</span>
                         </div>
-                        {/* <input type="password" name="password" onChange={handleChange} /> */}
                         <input type="password" {...register("password", {
                             required: "Password is required", minLength: {
                                 value: 5,

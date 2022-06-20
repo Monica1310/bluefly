@@ -5,10 +5,14 @@
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 1;
- 
 }
 #signupSection {
-  margin-top: 50px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+#signupSection > div a {
+  text-decoration: none;
 }
 
 #formSection {
@@ -75,6 +79,7 @@
 }
 
 #createlink {
+  color: #000;
   text-align: center;
   margin-top: -5px;
   cursor: pointer;
